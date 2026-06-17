@@ -10,9 +10,9 @@ __pycache__/
 
 # ── Data (do NOT commit raw data — too large) ─────────────────────────────
 data/raw/
-data/processed/*.parquet
+# data/processed/*.parquet
 data/processed/*.csv
-*.parquet
+# *.parquet
 *.csv
 
 # ── Model artifacts ───────────────────────────────────────────────────────
