@@ -1,4 +1,4 @@
-# ── Environment ───────────────────────────────────────────────────────────
+#Environment
 .env
 *.env
 venv/
@@ -8,25 +8,25 @@ __pycache__/
 *.pyo
 .Python
 
-# ── Data (do NOT commit raw data — too large) ─────────────────────────────
+#Data (do NOT commit raw data — too large)
 data/raw/
 # data/processed/*.parquet
 data/processed/*.csv
 # *.parquet
 *.csv
 
-# ── Model artifacts ───────────────────────────────────────────────────────
+#Model artifacts
 models/*.pkl
 models/*.joblib
 models/*.json
 
-# ── Notebook outputs ──────────────────────────────────────────────────────
+#Notebook outputs
 *.html
 eda_*.png
 *.ipynb_checkpoints/
 .ipynb_checkpoints/
 
-# ── IDE ───────────────────────────────────────────────────────────────────
+#IDE
 .vscode/
 .idea/
 *.swp
@@ -34,6 +34,13 @@ eda_*.png
 .DS_Store
 Thumbs.db
 
-# ── Logs ──────────────────────────────────────────────────────────────────
+#Logs
 logs/
 *.log
+
+#oldapps
+app5.py
+app2.py
+app3.py
+app4.py
+streamlit_app.py

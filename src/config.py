@@ -1,5 +1,5 @@
 """
-config.py — Central configuration for ParkSentinel.
+config.py — Central configuration for EaseTraffic.
 All paths, constants, and tunable parameters live here.
 Import this in every other module: from src.config import *
 """
@@ -92,6 +92,6 @@ GEMINI_TEMP     = 0.3          # low = factual, consistent
 MAX_TOKENS      = 1024
 
 # ── Dashboard ─────────────────────────────────────────────────────────────
-APP_TITLE       = "ParkSentinel — Bengaluru Parking Intelligence"
+APP_TITLE       = "EaseTraffic — Bengaluru Parking Intelligence"
 APP_ICON        = "🚦"
 TOP_N_ZONES     = 10           # zones shown in enforcement queue

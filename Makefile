@@ -1,4 +1,4 @@
-# ParkSentinel — Makefile
+# EaseTraffic — Makefile
 # Usage: make <target>
 
 .PHONY: setup clean run lint notebook

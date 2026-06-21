@@ -1,4 +1,4 @@
-# 🚦 ParkSentinel — AI-Driven Parking Violation Intelligence
+# 🚦 EaseTraffic — AI-Driven Parking Violation Intelligence
 ### Gridlock Hackathon 2.0 | Flipkart × Bengaluru Traffic Police
 
 > *Transforming reactive parking enforcement into proactive, data-driven patrolling.*
@@ -12,7 +12,7 @@ officers have no way to know **where** violations are clustering or **when** to
 patrol for maximum impact.
 
 ## Solution
-**ParkSentinel** is an AI-powered enforcement intelligence system that:
+**EaseTraffic** is an AI-powered enforcement intelligence system that:
 - Detects parking violation hotspots using spatial clustering (H3 + DBSCAN)
 - Scores each zone by congestion-risk impact (severity × vehicle size × road type × junction proximity)
 - Forecasts **when** each zone will peak using temporal models
@@ -53,7 +53,7 @@ parkssentinel/
 ### 1. Clone and set up environment
 ```bash
 git clone <your-repo-url>
-cd parksentinel
+cd EaseTraffic
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
