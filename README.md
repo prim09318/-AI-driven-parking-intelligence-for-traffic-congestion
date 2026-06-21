@@ -29,8 +29,8 @@ parkssentinel/
 ├── notebooks/
 │   ├── day1_pipeline_eda.ipynb     # Data pipeline + EDA
 │   ├── day2_hotspot_model.ipynb    # H3 binning + DBSCAN + priority score
-│   ├── day3_temporal.ipynb         # Temporal forecasting per zone
-│   └── day4_explainability.ipynb   # SHAP + GenAI explainer
+│   ├── day3_temporal_genai.ipynb   # Temporal forecasting per zone
+│   └── day3_revised.ipynb          # SHAP + GenAI explainer
 ├── src/
 │   ├── config.py               # Paths, constants, severity weights
 │   ├── pipeline.py             # Data loading + cleaning functions
@@ -39,7 +39,7 @@ parkssentinel/
 │   ├── temporal.py             # Forecasting functions
 │   └── genai_assistant.py      # Gemini Flash integration
 ├── app/
-│   └── streamlit_app.py        # Main dashboard
+│   └── app.py                  # Main dashboard
 ├── models/                     # Saved model artifacts
 ├── .env.example                # Environment variable template
 ├── requirements.txt
@@ -75,12 +75,14 @@ mkdir -p data/raw
 ```
 notebooks/day1_pipeline_eda.ipynb       → cleans data, saves parquet
 notebooks/day2_hotspot_model.ipynb      → builds priority scores
-notebooks/day3_temporal.ipynb           → builds patrol schedules
+notebooks/day3_temporal_genai.ipynb     → builds patrol schedules
+notebooks/day3_revised.ipynb            → add genai features
+
 ```
 
 ### 5. Launch dashboard
 ```bash
-streamlit run app/streamlit_app.py
+streamlit run app/app.py
 ```
 
 ---
@@ -126,4 +128,8 @@ streamlit run app/streamlit_app.py
 ---
 
 ## Author
+Himanshu Gupta 
+GitHub: https://github.com/prim09318 
+primo9318 
+LinkedIn: https://www.linkedin.com/in/himanshu-gupta-817023215/
 Gridlock Hackathon 2.0 — Round 2 Submission
