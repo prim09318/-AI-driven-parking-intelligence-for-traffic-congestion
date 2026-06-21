@@ -793,7 +793,7 @@ elif cp == "Live Queue":
     queue=get_full_queue(qh,qd,top_n=top_n)
     def ct(v): c={"Critical":"#e74c3c","High":"#e67e22","Medium":"#c8a800","Low":"#27ae60","Very Low":"#2980b9"}; return f"color:{c.get(v,'white')};font-weight:bold"
     def tr(v): return f"color:{'#e74c3c' if v=='increasing' else '#2ecc71' if v=='decreasing' else '#aaa'}"
-    st.dataframe(queue.style.applymap(ct,subset=["Tier"]).applymap(tr,subset=["Trend"]),
+    st.dataframe(queue.style.map(ct,subset=["Tier"]).map(tr,subset=["Trend"]),
                  use_container_width=True,height=460)
 
     st.divider()
@@ -869,7 +869,7 @@ elif cp == "Officer Roster":
             disp_off=off_data[["day","zone"]].rename(columns={"day":"Day","zone":"Assigned Zone"}).copy()
             disp_off["Tier"]=disp_off["Assigned Zone"].map(ztm).fillna("—")
             def ct2(v): c={"Critical":"#e74c3c","High":"#e67e22","Medium":"#c8a800","Low":"#27ae60","Very Low":"#2980b9"}; return f"color:{c.get(v,'white')};font-weight:bold"
-            st.dataframe(disp_off.style.applymap(ct2,subset=["Tier"]),use_container_width=True)
+            st.dataframe(disp_off.style.map(ct2,subset=["Tier"]),use_container_width=True)
             tc2=disp_off["Tier"].value_counts()
             cols5=st.columns(5)
             for col_t,tier in zip(cols5,TIER_ORDER):
@@ -909,7 +909,7 @@ elif cp == "Officer Roster":
             dmaster=page_data[["zone","tier","officer_count","officers","names"]].rename(columns={
                 "zone":"Location","tier":"Tier","officer_count":"Officers",
                 "officers":"Roll Numbers","names":"Names"})
-            st.dataframe(dmaster.style.applymap(ct3,subset=["Tier"]),use_container_width=True,height=480)
+            st.dataframe(dmaster.style.map(ct3,subset=["Tier"]),use_container_width=True,height=480)
             pc1,pc2,pc3=st.columns([1,2,1])
             with pc1:
                 if st.button("⬅️ Previous",disabled=pg==0):
